@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cykj.demo.mapper.UserMapper">
+
+    <insert id="add" parameterType="com.cykj.demo.entity.User" keyProperty="id" useGeneratedKeys="true">
+		insert into tb_user( login_name,true_name,pwd,state,level_id,score)
+		values( #{loginName},#{trueName},#{pwd},#{state},#{levelId},0)
+	</insert>
+
+
+</mapper>
+	
